@@ -3,7 +3,7 @@
 Vorab registriert in 02_FORSCHUNGSDOKUMENTATION/_03_EXPERIMENTE/EXP-E2_Mikrosekunden_Messzeit.md
 (Abschnitt „Kontrollpunkte"). Arbeitspunkte (ω_stat, I0, θ) werden unverändert aus dem EXP-E2-Lauf übernommen.
 
-Aufruf aus 01_PRL_CODE:  python -B -u -m _08_ERGEBNISSE.exp_e2_kontrollpunkt --e2-lauf EXP-E2_<zeitstempel>
+Aufruf aus 01_PRL_CODE:  python -B -u -m _08_ERGEBNISSE._02_ENDLICHE_MESSZEIT.exp_e2_kontrollpunkt --e2-lauf EXP-E2_<zeitstempel>
 """
 from __future__ import annotations
 
@@ -20,7 +20,7 @@ from _02_AUSFUEHRUNG.homodyn_trajektorien import messkanal_rwa, mittelwert_recor
 from _03_WISSENSCHAFTLICHE_PRUEFUNGEN.referenzfaelle import buendel
 from _04_AUSWERTUNG_DIAGNOSTIK import decoder
 from _05_INFRASTRUKTUR.runtime.provenienz import PROJEKT_ROOT, neue_lauf_id, schreibe_manifest
-from _08_ERGEBNISSE.exp_e1_endliche_messzeit import CUTOFF, DT_MW, ETA, _modell
+from _08_ERGEBNISSE._02_ENDLICHE_MESSZEIT.exp_e1_endliche_messzeit import CUTOFF, DT_MW, ETA, _modell
 
 NTRAJ = 2000
 BIN_ZEIT = 5.0                       # Binbreite in λ0^-1 (unabhängig von dt)

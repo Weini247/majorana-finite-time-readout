@@ -2,7 +2,7 @@
 
 Schreibt Rohdaten + Manifest nach 10_Raw_Outputs/<lauf_id>/ und Abbildungen + Kennzahlen nach
 11_Processed_Outputs/<lauf_id>/. Aufruf aus 01_PRL_CODE:
-    python -B -m _08_ERGEBNISSE.reproduktion_fig3
+    python -B -m _08_ERGEBNISSE._01_REPRODUKTION.reproduktion_fig3
 """
 from __future__ import annotations
 

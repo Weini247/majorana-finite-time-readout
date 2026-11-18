@@ -1,6 +1,6 @@
 # EXP-E4 — Robustheit der Arbeitspunktwahl gegen Parameterabweichungen (Etappe 3, Q-3B)
 
-**Klasse:** explorativ · **Status:** abgeschlossen 2026-11-18 — **Nullresultat** (F-3.7): Regret 0 für alle Budgets und T (Lauf `EXP-E4_20261111T002220Z`). Vorab registriert 2026-11-10, vor jeder Rechnung. Skript `_08_ERGEBNISSE/exp_e4_robustheit.py`.
+**Klasse:** explorativ · **Status:** abgeschlossen 2026-11-18 — **Nullresultat** (F-3.7): Regret 0 für alle Budgets und T (Lauf `EXP-E4_20261111T002220Z`). Vorab registriert 2026-11-10, vor jeder Rechnung. Skript `_08_ERGEBNISSE/_03_BAYES_ROBUSTHEIT/exp_e4_robustheit.py`.
 
 ## Frage
 Kalibriert man am Nominalmodell (I0, θ, Filtergewichte, Schwelle), misst aber an einem leicht abweichenden Gerät: Ist die nominal optimale Antriebsfrequenz auch im Worst-Case bzw. im Mittel über realistische Abweichungen optimal?

@@ -1,6 +1,6 @@
 """EXP-E1: stationär gewählter vs. endlichzeit-optimaler Arbeitspunkt (Spezifikation im Experimentordner).
 
-Aufruf aus 01_PRL_CODE:  python -B -m _08_ERGEBNISSE.exp_e1_endliche_messzeit [--nur-gauss]
+Aufruf aus 01_PRL_CODE:  python -B -m _08_ERGEBNISSE._02_ENDLICHE_MESSZEIT.exp_e1_endliche_messzeit [--nur-gauss]
 """
 from __future__ import annotations
 

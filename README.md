@@ -59,10 +59,10 @@ python -m venv _UMGEBUNG/venv
 _UMGEBUNG/venv/Scripts/python -m pip install -r 01_PRL_CODE/_05_INFRASTRUKTUR/requirements-lock.txt
 cd 01_PRL_CODE
 ../_UMGEBUNG/venv/Scripts/python -B -m _05_INFRASTRUKTUR.run_checks --scope all   # all 58 checks (~5 min)
-../_UMGEBUNG/venv/Scripts/python -B -m _08_ERGEBNISSE.abbildungen_readme           # README figures from committed CSVs
+../_UMGEBUNG/venv/Scripts/python -B -m _09_ABBILDUNGEN.abbildungen_readme           # README figures from committed CSVs
 ```
 
-Experiment scripts live in `01_PRL_CODE/_08_ERGEBNISSE/` (`exp_e3_bayes_arbeitspunkt.py`, `exp_e4_robustheit.py`, …). The full trajectory runs take hours on a desktop CPU. Their processed outputs are committed in `11_Processed_Outputs/`, together with a provenance manifest per run.
+Experiment scripts live in `01_PRL_CODE/_08_ERGEBNISSE/`, one subfolder per stage (e.g. `_03_BAYES_ROBUSTHEIT/exp_e3_bayes_arbeitspunkt.py`). The full trajectory runs take hours on a desktop CPU. Their processed outputs are committed in `11_Processed_Outputs/`, together with a provenance manifest per run.
 
 ## Repository layout
 
@@ -74,7 +74,8 @@ Experiment scripts live in `01_PRL_CODE/_08_ERGEBNISSE/` (`exp_e3_bayes_arbeitsp
 | `01_PRL_CODE/_04_AUSWERTUNG_DIAGNOSTIK/` | Decoders, error metrics, Wilson intervals |
 | `01_PRL_CODE/_05_INFRASTRUKTUR/` | Configuration, provenance, test runner, dependencies |
 | `01_PRL_CODE/_06_TESTS/` | Unit tests |
-| `01_PRL_CODE/_08_ERGEBNISSE/` | Experiment and figure scripts |
+| `01_PRL_CODE/_08_ERGEBNISSE/` | Experiment scripts per stage: `_01_REPRODUKTION`, `_02_ENDLICHE_MESSZEIT`, `_03_BAYES_ROBUSTHEIT` |
+| `01_PRL_CODE/_09_ABBILDUNGEN/` | Figure scripts (from committed CSVs) |
 | `01_PRL_CODE/SCHWELLEN.md` | Every numerical tolerance with its justification |
 | `02_FORSCHUNGSDOKUMENTATION/` | Research plan, conventions, findings, experiment registrations, stage reports |
 | `03_Quellen/Referenzdaten_Zenodo_20623730/` | Reference data of Benjadi & Egger (CC-BY-4.0), with checksums |

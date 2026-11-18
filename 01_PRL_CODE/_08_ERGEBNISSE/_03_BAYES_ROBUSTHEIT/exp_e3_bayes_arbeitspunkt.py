@@ -1,7 +1,7 @@
 """EXP-E3: Arbeitspunktwahl unter echter Messstatistik (Bayes-Filter, Matched Filter, Boxcar) bei n̄* = 0.3.
 
 Spezifikation: 02_FORSCHUNGSDOKUMENTATION/_03_EXPERIMENTE/EXP-E3_Bayes_Arbeitspunkt.md (vorab registriert).
-Aufruf aus 01_PRL_CODE:  python -B -u -m _08_ERGEBNISSE.exp_e3_bayes_arbeitspunkt
+Aufruf aus 01_PRL_CODE:  python -B -u -m _08_ERGEBNISSE._03_BAYES_ROBUSTHEIT.exp_e3_bayes_arbeitspunkt
 """
 from __future__ import annotations
 
@@ -16,7 +16,7 @@ from _02_AUSFUEHRUNG.homodyn_trajektorien import log_likelihood_quotient, messka
 from _03_WISSENSCHAFTLICHE_PRUEFUNGEN.referenzfaelle import buendel
 from _04_AUSWERTUNG_DIAGNOSTIK import decoder
 from _05_INFRASTRUKTUR.runtime.provenienz import PROJEKT_ROOT, neue_lauf_id, schreibe_manifest
-from _08_ERGEBNISSE.exp_e1_endliche_messzeit import CUTOFF, ETA, _modell
+from _08_ERGEBNISSE._02_ENDLICHE_MESSZEIT.exp_e1_endliche_messzeit import CUTOFF, ETA, _modell
 
 E2 = "EXP-E2_20261109T205736Z"
 BUDGET = 0.3

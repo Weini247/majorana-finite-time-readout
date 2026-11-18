@@ -13,7 +13,7 @@ Modell, Paritäten, Messkanal, η = 0.5, Ressourcenregel, ω-Raster [11.80, 12.2
 - Stufe 1: nur Gauß-Benchmark (gültig im Pilotgebiet laut F-2.4).
 - Stufe 2 (nur falls Gauß-Regret ≥ 2 pp irgendwo): Trajektorienprüfung an ω_stat und ω_T bei diesem T, 2000 + 2000 Records je Parität, dt-Halbierungsprüfung.
 
-## Kontrollpunkte (präzisiert 2026-11-10, vor der Rechnung; Skript `_08_ERGEBNISSE/exp_e2_kontrollpunkt.py`)
+## Kontrollpunkte (präzisiert 2026-11-10, vor der Rechnung; Skript `_08_ERGEBNISSE/_02_ENDLICHE_MESSZEIT/exp_e2_kontrollpunkt.py`)
 Gültigkeit des Gauß-Benchmarks bei langem T, unabhängig vom Regret. Arbeitspunkt jeweils ω_stat mit I0 und θ unverändert aus dem EXP-E2-Lauf; 2000 Kalibrier- + 2000 Testrecords je Parität, Matched Filter (Gewichte = exakte Mittelwert-Records, Bins 5 λ₀⁻¹) und Boxcar, Wilson-95 %.
 1. n̄* = 0.01, T = 10⁴, dt = 0.2
 2. n̄* = 0.3, T = 2500, dt = 0.2 (T = 10⁴ aus Laufzeitgründen nicht: d = 16 ≈ 10× teurer pro Schritt)

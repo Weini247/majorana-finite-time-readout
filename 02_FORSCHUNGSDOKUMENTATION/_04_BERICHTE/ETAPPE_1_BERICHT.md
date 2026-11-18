@@ -10,7 +10,7 @@
 | 1.2 Theorie | `_05_THEORIE/T1_Auslesemodell_Herleitung.md`: Amplitudenkonvention, Semiklassik = lineare Antwort bei T = 0, Vorzeichen der dispersiven Verschiebung (Schrieffer–Wolff) |
 | 1.3 Konventionen | λ₀ = h·0.2 GHz entschieden; Spaltenbelegung fig3a/3e bestimmt; κ_in = κ_out konsistent |
 | 1.4 Kern | `_01_GRUNDLAGEN_FORMELN` (Einheiten, abgeleitete Größen, RWA-Operatoren, Semiklassik), `_02_AUSFUEHRUNG` (stationärer Löser mit drei Methoden und harter Diagnostik), `_04_AUSWERTUNG_DIAGNOSTIK` (Fehlermaße Eqs. 43–45 in beiden Lesarten) |
-| 1.5 Reproduktion | `_08_ERGEBNISSE/reproduktion_fig3.py`, Lauf `EXP-R1_20261109T193812Z` (Manifest, Abbildungen, `kennzahlen.csv`) |
+| 1.5 Reproduktion | `_08_ERGEBNISSE/_01_REPRODUKTION/reproduktion_fig3.py`, Lauf `EXP-R1_20261109T193812Z` (Manifest, Abbildungen, `kennzahlen.csv`) |
 
 **Tests:** `run_checks --scope all` → 35/35 bestanden (24 aktive Tests mit deutschen Methodennamen, 11 wissenschaftliche VAL-Prüfungen).
 

@@ -2,7 +2,7 @@
 
 Spezifikation: 02_FORSCHUNGSDOKUMENTATION/_03_EXPERIMENTE/EXP-E4_Robustheit_Gauss.md (vorab registriert).
 Kalibrierung (I0, θ, Filtergewichte, Schwelle) am Nominalmodell; Messdaten aus dem abweichenden „wahren" Modell.
-Aufruf aus 01_PRL_CODE:  python -B -u -m _08_ERGEBNISSE.exp_e4_robustheit
+Aufruf aus 01_PRL_CODE:  python -B -u -m _08_ERGEBNISSE._03_BAYES_ROBUSTHEIT.exp_e4_robustheit
 """
 from __future__ import annotations
 
@@ -17,7 +17,7 @@ from scipy.special import erfc
 from _02_AUSFUEHRUNG.homodyn_trajektorien import messkanal_rwa, mittelwert_record
 from _03_WISSENSCHAFTLICHE_PRUEFUNGEN.referenzfaelle import buendel
 from _05_INFRASTRUKTUR.runtime.provenienz import PROJEKT_ROOT, neue_lauf_id, schreibe_manifest
-from _08_ERGEBNISSE.exp_e1_endliche_messzeit import CUTOFF, ETA, _modell
+from _08_ERGEBNISSE._02_ENDLICHE_MESSZEIT.exp_e1_endliche_messzeit import CUTOFF, ETA, _modell
 
 E2 = "EXP-E2_20261109T205736Z"
 BUDGETS = (0.3, 0.01)

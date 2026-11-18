@@ -17,7 +17,7 @@ Verschiebt sich bei gesättigtem Qubit (n̄* = 0.3) der fehlerminimierende Antri
 Designfolgen: Binbreite 0.4 (gegenüber 0.2 auf 0.1 pp konvergiert; 1.0 zu grob). Laufzeit ≈ 45 min je ω bis T = 5000. Am Pilotpunkt kein messbarer Vorteil des Bayes-Filters gegenüber dem Matched Filter (gleiche Testdaten).
 
 ## Fixiert
-Modell, Messkanal, η = 0.5, Cutoff 8 wie EXP-E2; I0 und θ je ω unverändert aus `EXP-E2_20261109T205736Z`. ω ∈ {11.95, 11.97, 11.99, 12.01, 12.03}; T ∈ {2500, 5000} (T = 2500 als Anfangsstück derselben Records). Je ω und Parität 2000 Kalibrier- + 2000 Testrecords (neue Seeds), dt = 0.2, Binbreite 0.4. Decoder: Bayes-LLR mit Schwelle 0; Matched Filter und Boxcar mit Schwelle aus den Kalibrierrecords. Skript `_08_ERGEBNISSE/exp_e3_bayes_arbeitspunkt.py`.
+Modell, Messkanal, η = 0.5, Cutoff 8 wie EXP-E2; I0 und θ je ω unverändert aus `EXP-E2_20261109T205736Z`. ω ∈ {11.95, 11.97, 11.99, 12.01, 12.03}; T ∈ {2500, 5000} (T = 2500 als Anfangsstück derselben Records). Je ω und Parität 2000 Kalibrier- + 2000 Testrecords (neue Seeds), dt = 0.2, Binbreite 0.4. Decoder: Bayes-LLR mit Schwelle 0; Matched Filter und Boxcar mit Schwelle aus den Kalibrierrecords. Skript `_08_ERGEBNISSE/_03_BAYES_ROBUSTHEIT/exp_e3_bayes_arbeitspunkt.py`.
 
 ## Entscheidungsregel
 - **Verschiebung relevant**, wenn für einen Decoder und ein T gilt: P(ω_stat) − min_ω P(ω) > 2 pp **und** die Wilson-Intervalle sind disjunkt.

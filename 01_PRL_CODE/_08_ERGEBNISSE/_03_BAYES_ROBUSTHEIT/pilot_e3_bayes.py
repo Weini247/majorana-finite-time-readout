@@ -2,7 +2,7 @@
 
 Punkt: n̄* = 0.3, ω_stat, T = 2500 (EXP-E2K-Punkt mit Gauß-Abweichung). Decoder: Matched Filter, Boxcar
 (Schwelle auf Kalibrierdaten), Bayes-LLR mit Schwelle 0 bei Binbreiten 0.2 / 0.4 / 1.0.
-Aufruf aus 01_PRL_CODE:  python -B -u -m _08_ERGEBNISSE.pilot_e3_bayes
+Aufruf aus 01_PRL_CODE:  python -B -u -m _08_ERGEBNISSE._03_BAYES_ROBUSTHEIT.pilot_e3_bayes
 """
 from __future__ import annotations
 
@@ -16,8 +16,8 @@ from _02_AUSFUEHRUNG.homodyn_trajektorien import log_likelihood_quotient, messka
 from _03_WISSENSCHAFTLICHE_PRUEFUNGEN.referenzfaelle import buendel
 from _04_AUSWERTUNG_DIAGNOSTIK import decoder
 from _05_INFRASTRUKTUR.runtime.provenienz import PROJEKT_ROOT, neue_lauf_id, schreibe_manifest
-from _08_ERGEBNISSE.exp_e1_endliche_messzeit import CUTOFF, ETA, _modell
-from _08_ERGEBNISSE.exp_e2_kontrollpunkt import _arbeitspunkt
+from _08_ERGEBNISSE._02_ENDLICHE_MESSZEIT.exp_e1_endliche_messzeit import CUTOFF, ETA, _modell
+from _08_ERGEBNISSE._02_ENDLICHE_MESSZEIT.exp_e2_kontrollpunkt import _arbeitspunkt
 
 E2 = "EXP-E2_20261109T205736Z"
 BUDGET, T, DT, NTRAJ, PROZ = 0.3, 2500.0, 0.2, 2000, 6

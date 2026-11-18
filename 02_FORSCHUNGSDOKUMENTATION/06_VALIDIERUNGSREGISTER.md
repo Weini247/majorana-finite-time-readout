@@ -44,4 +44,4 @@ SME-Ensemblemittel vs. `mesolve` (T4); \(\eta=0\Rightarrow P_{err}=0.5\); \(t_1=
 | V1-12 | RWA-Gültigkeit unter Antrieb | OPEN (ED ohne Antrieb in VAL5 vorhanden) |
 | V1-H | `test_alle_zenodo_dateien_entsprechen_der_md5_aus_der_api` | VERIFIED |
 | EXP-R1a/e semikl. | VAL4 | REPRODUCED |
-| EXP-R1 exakt + fig3c | `_08_ERGEBNISSE/reproduktion_fig3.py` | BLOCKED (F-1.3) |
+| EXP-R1 exakt + fig3c | `_08_ERGEBNISSE/_01_REPRODUKTION/reproduktion_fig3.py` | BLOCKED (F-1.3) |

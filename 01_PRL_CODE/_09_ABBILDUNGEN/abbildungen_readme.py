@@ -1,6 +1,6 @@
 """Abbildungen für die README aus den committeten Ergebnis-CSVs (keine Simulation).
 
-Aufruf aus 01_PRL_CODE:  python -B -m _08_ERGEBNISSE.abbildungen_readme
+Aufruf aus 01_PRL_CODE:  python -B -m _09_ABBILDUNGEN.abbildungen_readme
 Ausgabe: <Repo>/abbildungen/*.png
 """
 from __future__ import annotations

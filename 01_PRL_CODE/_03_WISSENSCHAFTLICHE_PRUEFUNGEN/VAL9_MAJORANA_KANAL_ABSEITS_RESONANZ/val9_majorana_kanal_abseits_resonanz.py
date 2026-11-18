@@ -21,7 +21,7 @@ import numpy as np
 from _02_AUSFUEHRUNG.homodyn_trajektorien import log_likelihood_quotient, messkanal_rwa, mittelwert_record, trajektorien
 from _03_WISSENSCHAFTLICHE_PRUEFUNGEN.referenzfaelle import buendel
 from _05_INFRASTRUKTUR.runtime.provenienz import PROJEKT_ROOT
-from _08_ERGEBNISSE.exp_e1_endliche_messzeit import CUTOFF, ETA, _modell
+from _08_ERGEBNISSE._02_ENDLICHE_MESSZEIT.exp_e1_endliche_messzeit import CUTOFF, ETA, _modell
 
 OMEGA, BUDGET = 12.03, 0.3
 DT, T, NTRAJ = 0.2, 400.0, 400
