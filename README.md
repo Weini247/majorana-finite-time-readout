@@ -1,4 +1,4 @@
-# ParityReadoutLab — Finite-Time Majorana Parity Readout
+# Majorana Finite-Time Readout
 
 **Does the drive frequency that maximises the *steady-state* parity contrast of a Majorana box qubit also minimise the *single-shot error* of a finite, inefficient homodyne measurement?**
 

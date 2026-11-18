@@ -1,10 +1,11 @@
 cff-version: 1.2.0
 message: "If you use this software or its results, please cite it as below, together with the reference paper."
-title: "ParityReadoutLab: finite-time Majorana parity readout"
+title: "Majorana Finite-Time Readout: optimal working point for finite-time parity readout of a Majorana box qubit"
 type: software
 authors:
   - alias: Weini247
 date-released: 2026-11-18
+repository-code: "https://github.com/Weini247/majorana-finite-time-readout"
 license: MIT
 keywords:
   - Majorana box qubit
