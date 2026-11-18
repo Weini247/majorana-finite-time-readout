@@ -6,6 +6,9 @@ In a validated open-system model of a Majorana box coupled to a double quantum d
 
 This is a **pre-registered null result** with quantified error rates, not a claim that stationary optimisation is sufficient in general.
 
+### Status
+Independent student research project in theoretical and computational physics. The work follows a pre-registered, validated methodology, but it has not been peer-reviewed. Results hold within the model and assumptions stated under [Scope and limits](#scope-and-limits); they are not an experimentally validated account of Majorana parity readout.
+
 > Folder, file and test names are German; documentation in `02_FORSCHUNGSDOKUMENTATION/` is German. This README summarises it in English.
 
 ## Key results
