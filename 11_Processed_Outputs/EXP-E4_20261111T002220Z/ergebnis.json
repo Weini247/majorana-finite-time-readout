@@ -1,0 +1,72 @@
+{
+  "0.3": {
+    "2500": {
+      "omega_nominal": 11.99,
+      "omega_worstcase": 11.99,
+      "omega_mittel": 11.99,
+      "P_wc_bei_omega_nominal": 0.1701147306684029,
+      "P_wc_opt": 0.1701147306684029,
+      "regret_worstcase": 0.0,
+      "P_mittel_bei_omega_nominal": 0.12895700473359642,
+      "P_mittel_opt": 0.12895700473359642,
+      "regret_mittel": 0.0
+    },
+    "5000": {
+      "omega_nominal": 11.99,
+      "omega_worstcase": 11.99,
+      "omega_mittel": 11.99,
+      "P_wc_bei_omega_nominal": 0.09152500523897297,
+      "P_wc_opt": 0.09152500523897297,
+      "regret_worstcase": 0.0,
+      "P_mittel_bei_omega_nominal": 0.05533496141631572,
+      "P_mittel_opt": 0.05533496141631572,
+      "regret_mittel": 0.0
+    },
+    "10000": {
+      "omega_nominal": 11.99,
+      "omega_worstcase": 11.99,
+      "omega_mittel": 11.99,
+      "P_wc_bei_omega_nominal": 0.03458310889747086,
+      "P_wc_opt": 0.03458310889747086,
+      "regret_worstcase": 0.0,
+      "P_mittel_bei_omega_nominal": 0.013887950329068406,
+      "P_mittel_opt": 0.013887950329068406,
+      "regret_mittel": 0.0
+    }
+  },
+  "0.01": {
+    "2500": {
+      "omega_nominal": 11.99,
+      "omega_worstcase": 11.99,
+      "omega_mittel": 11.99,
+      "P_wc_bei_omega_nominal": 0.41537922759760415,
+      "P_wc_opt": 0.41537922759760415,
+      "regret_worstcase": 0.0,
+      "P_mittel_bei_omega_nominal": 0.4019837342500243,
+      "P_mittel_opt": 0.4019837342500243,
+      "regret_mittel": 0.0
+    },
+    "5000": {
+      "omega_nominal": 11.99,
+      "omega_worstcase": 11.99,
+      "omega_mittel": 11.99,
+      "P_wc_bei_omega_nominal": 0.3799723283798111,
+      "P_wc_opt": 0.3799723283798111,
+      "regret_worstcase": 0.0,
+      "P_mittel_bei_omega_nominal": 0.36136806201444505,
+      "P_mittel_opt": 0.36136806201444505,
+      "regret_mittel": 0.0
+    },
+    "10000": {
+      "omega_nominal": 11.99,
+      "omega_worstcase": 11.99,
+      "omega_mittel": 11.99,
+      "P_wc_bei_omega_nominal": 0.3322346412298237,
+      "P_wc_opt": 0.3322346412298237,
+      "regret_worstcase": 0.0,
+      "P_mittel_bei_omega_nominal": 0.3071158011348742,
+      "P_mittel_opt": 0.3071158011348742,
+      "regret_mittel": 0.0
+    }
+  }
+}

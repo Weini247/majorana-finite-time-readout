@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite it as below, together with the reference paper."
+title: "ParityReadoutLab: finite-time Majorana parity readout"
+type: software
+authors:
+  - alias: Weini247
+date-released: 2026-11-18
+license: MIT
+keywords:
+  - Majorana box qubit
+  - parity readout
+  - homodyne detection
+  - stochastic master equation
+references:
+  - type: article
+    title: "Parity readout in Majorana box qubits from the dispersive to the resonant regime"
+    authors:
+      - family-names: Benjadi
+        given-names: S. M.
+      - family-names: Egger
+        given-names: R.
+    journal: "Physical Review B"
+    year: 2026
+    identifiers:
+      - type: other
+        value: "arXiv:2603.06482"
+  - type: data
+    title: "Parity readout in Majorana box qubits from the dispersive to the resonant regime [Data set]"
+    authors:
+      - family-names: Benjadi
+        given-names: S. M.
+      - family-names: Egger
+        given-names: R.
+    year: 2026
+    doi: 10.5281/zenodo.20623730

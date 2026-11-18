@@ -1,0 +1,5 @@
+/_UMGEBUNG/
+/10_Raw_Outputs/
+__pycache__/
+*.py[cod]
+.pytest_cache/

@@ -1,0 +1,16 @@
+# Wissenschaftliche Prüfungen (VAL)
+
+Schema je Prüfung: **Auftrag · Testfall · Referenz · Bestanden wenn · Was nicht geprüft wird.** Schwellen in `../SCHWELLEN.md`.
+
+| VAL | Auftrag | Referenz | Bestanden wenn | Nicht geprüft |
+|---|---|---|---|---|
+| VAL0 Analytische Kavität | g = 0: getriebene gedämpfte Kavität; Thermalzustand ohne Antrieb | Lehrbuch (kohärenter Zustand, Bose/Fermi-Besetzung) | ⟨a⟩, n, ⟨τ_z⟩ rel. ≤ 1e-9 / 1e-8; Semiklassik exakt | Kopplung |
+| VAL1 Jaynes–Cummings lineare Antwort | T = 0, I0 → 0: Vakuum-Rabi-Transmission | Blais et al., RMP 93, 025005 (2021) | rel. ≤ 1e-6 an 5 Frequenzen; ε_A ∝ I0 (Steigung 1 ± 0.1) | T > 0, starke Treiber |
+| VAL2 Dispersiver Grenzfall | Kavitätsverschiebung −g²/Δ im RWA-Modell | Blais et al., PRA 69, 062320 (2004) | rel. ≤ 5 %, Fehlerordnung 2 ± 0.25 in g/Δ | gegenrotierende Terme |
+| VAL3 Löserunabhängigkeit/Cutoff | QuTiP direkt vs. eigene Sparse-Lösung vs. Propagation; Cutoff-Verdopplung | interne Unabhängigkeit | ≤ 1e-8 / 1e-6 rel. | Modellfehler |
+| VAL4 Benjadi–Egger Fig. 3 | Semiklassische Spalten fig3a (Eq. 20) und fig3e (Eq. 26/22); λ₀-Konvention | Benjadi & Egger 2026 + Zenodo-Daten | ≤ 1 % Kurvenmaßstab, Median ≤ 2 %; Kreisfrequenz verworfen (T5) | **exakte Spalten, fig3c (BLOCKED)** |
+| VAL6 Smith SNR-Einschwingen | Mittelwert-Record → Boxcar-SNR(τ) bei κ = 2χ inkl. Einschwingen | Smith et al., PRX Quantum 1, 020313 (2020), Eq. (29) | rel. ≤ 1e-4 (mit SNR_hom = √2 SNR_het); Record = 2√(ηκ)Re(e^{-iθ}α) ≤ 1e-7 | Qubitdynamik |
+| VAL7 Trajektorien Gauß-Grenzfall | Ensemble-Mittel der Trajektorien; Matched Filter vs. Gauß-Formel; η = 0 | Wiseman & Milburn (2010); Gambetta et al., PRA 76, 012325 (2007), Eq. (6) | ≤ 4.5 Standardfehler; Gauß-Vorhersage im Wilson-95-%-Intervall; η = 0 ⇒ 0.5 im Intervall | Nicht-QND, Sättigung (Laufzeit ~5 min) |
+| VAL8 Bayes-Filter linearer Grenzfall | LLR aus zwei bedingten Zuständen vs. linearer Matched Filter (Binbreite 0.5 und 0.2; seit F-3.4 ohne Fehler 1. Ordnung); Bayes ohne Kalibrierung vs. Gauß; η = 0 ⇒ LLR = 0 | Wiseman & Milburn (2010) Kap. 4/5; Gambetta et al., PRA 76, 012325 (2007) | rel. Abw. ≤ 1e-3 bei beiden Binbreiten; Gauß im Wilson-95-%-Intervall; \|LLR\| ≤ 1e-14 | nur linearer Pointer; Majorana-Kanal über EXP-E3 (Binbreiten-Prüfung) |
+| VAL9 Majorana-Kanal abseits der Resonanz | Trajektorienmittel vs. mesolve bei ω = 12.03 (n̄* = 0.3, dt 0.2); Bayes-LLR Binbreite 0.4 vs. 0.2, Vorzeichen zur wahren Parität | Wiseman & Milburn (2010) Kap. 4; Anlass F-3.4 (EXP-E3 FAILED) | \|z\| < 4 je Fenster; \|ΔLLR\|/σ < 0.35 | ein ω-Punkt; Gegenprobe: alter linearisierter Schritt fällt durch |
+| VAL5 Voller Hamiltonoperator dispersiv | Richtung der Kavitätsverschiebung im vollen Eq.-(5)-Modell | Schrieffer–Wolff (Blais 2004; Zueco et al. 2009) | Vorzeichen −sgn(Δ), Betrag ≤ 5 % | Dissipation |
