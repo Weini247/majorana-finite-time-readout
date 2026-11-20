@@ -93,3 +93,12 @@
 | D'Anjou & Coish, PRA 89, 012313 (2014), arXiv:1311.2979 | Vergleich Boxcar, Peak-Signal und Maximum-Likelihood-Auswertung; zufällige Einschaltzeit erhöht die Fehlerrate stets | Präzedenz: ML-Decoder schlägt Boxcar, wenn das Signal nicht stationär-gaußsch ist; Spin-zu-Ladung-Kontext, kein Homodyn/Resonator | VERIFIED (Abstract) |
 | Gambetta et al., PRA 76, 012325 (2007) | optimale Auswertung kontinuierlicher QND-Messung | bereits Referenz für VAL7/VAL8 | VERIFIED (Etappe 2) |
 | Majorana-Paritätsauslese über Quantenpunkt (arXiv:1601.07506; PRR 2, 033255 (2020)); Kitaev-Kette Einzelschuss (arXiv:2507.01606, Nature 650, 334 (2026)) | Ladungs-/Kapazitätsauslese, Telegraphensignal, Paritätslebensdauer > 1 ms | kein Likelihood-Filter mit Homodyn/η im resonanten Box-Regime gefunden; Neuheitslücke vorläufig bestätigt | Abstract-Ebene; Volltextprüfung offen |
+
+## G. WP 6.0 — Paritätslebensdauern (Stand 2026-11-18, Abstract-/Zusammenfassungsebene)
+| Quelle | Inhalt | Relevanz | Status |
+|---|---|---|---|
+| Microsoft Quantum, arXiv:2507.08795 (2025), *Distinct lifetimes for X and Z loop measurements in a Majorana tetron device* | Wiederholte Einzelschussmessungen: Wechselzeit ≈ 14.5 µs (X-Schleife, interne Paritätswechsel), ≈ 12.4 ms (Z-Schleife, externe Vergiftung); Zuordnungsfehler 16 % bzw. 0.5 % | Γ_qp-Raster EXP-P1 (15 µs, ms-Bereich) | ABS |
+| arXiv:2606.03884 (2026), InAs–Pb-Tetron | Wechselzeit ≈ 20 s | oberes Ende: praktisch kein Wechsel während µs-Messungen | ABS (nur Abstract) |
+| N. van Loo et al., Nature 650, 334 (2026), arXiv:2507.01606 | Kitaev-Kette, Quantenkapazität, Telegrafenschalten, Lebensdauer > 1 ms, Einzelschuss in µs | Γ_qp = 1/(1 ms) | ABS (Lebensdauer aus Abstract/Presse) |
+
+Hinweis: Die Interpretation der Microsoft-Messungen als topologisch ist umstritten; für EXP-P1 werden nur die gemessenen Wechselzeiten als Größenordnung genutzt.

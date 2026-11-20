@@ -45,6 +45,8 @@ Methodischer Nebenbefund: Ein Integratorfehler, der nur abseits des Resonanzpunk
 - Aus Etappe 1 weiterhin offen, nicht blockierend: V1-10, V1-12, Eq. (27), Autorenfrage (F-1.3, F-1.5).
 
 ## 6. Vorschlag zu G3 (zur Freigabe)
+**Entscheidung 2026-11-18:** freigegeben. Etappe 4 entfällt; Etappe 5 als öffentliches Repository durchgeführt; Etappe 3b wird als Etappe 6 (Paritätswechsel, `_02_ETAPPEN/ETAPPE_6_PLAN.md`) weitergeführt.
+
 1. **Etappe 4 (ML-Decoder) nicht starten.** Der Bayes-Decoder ist für dieses Modell optimal und schlägt den Matched Filter nicht messbar; ein gelernter Decoder hat keine begründete Aufgabe und keine Lücke zu schließen.
 2. **Optional Etappe 3b:** gezielte Suche nach einem Regime mit Regret > 0 (schwächere Kopplung, kombinierte Abweichungen, Budget als freie Variable), nur mit vorab registrierter Frage.
 3. **Etappe 5:** reproduzierbares öffentliches Repository mit Abbildungen und englischer README.

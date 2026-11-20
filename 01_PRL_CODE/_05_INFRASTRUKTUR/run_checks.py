@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 THREAD_VARIABLES = ("OPENBLAS_NUM_THREADS", "OMP_NUM_THREADS", "MKL_NUM_THREADS")
 LOCAL_PACKAGES = ("_01_GRUNDLAGEN_FORMELN", "_02_AUSFUEHRUNG", "_03_WISSENSCHAFTLICHE_PRUEFUNGEN",
                   "_04_AUSWERTUNG_DIAGNOSTIK", "_05_INFRASTRUKTUR")
-EXPECTED_COUNTS = {"active": 37, "scientific": 21, "all": 58}
+EXPECTED_COUNTS = {"active": 37, "scientific": 29, "all": 66}
 
 
 def configure_process(temp: Path) -> None:

@@ -6,6 +6,8 @@ In a validated open-system model of a Majorana box coupled to a double quantum d
 
 This is a **pre-registered null result** with quantified error rates, not a claim that stationary optimisation is sufficient in general.
 
+**Stage 6** adds quasiparticle poisoning (random parity switches during the measurement). Knowing the switching rate does not lower the minimum error, but it makes the readout insensitive to measuring too long: decoders that ignore the rate have an optimal measurement time of roughly a third of the parity lifetime, while a Bayesian (Wonham) filter or a rate-aware matched filter stay flat. The Bayesian filter never beats the best linear decoder by more than 0.15 pp.
+
 ### Status
 Independent student research project in theoretical and computational physics. The work follows a pre-registered, validated methodology, but it has not been peer-reviewed. Results hold within the model and assumptions stated under [Scope and limits](#scope-and-limits); they are not an experimentally validated account of Majorana parity readout.
 
@@ -39,11 +41,27 @@ The working point is calibrated on the nominal model and evaluated with flux pha
 | 12.01 | 2 / 4 µs | .174 / .092 | .177 / .099 | .184 / .103 | .179 / .098 |
 | 12.03 | 2 / 4 µs | .271 / .195 | .273 / .195 | .275 / .197 | .266 / .188 |
 
+### 4. Parity switching during the measurement (stage 6)
+
+![Error rate vs. measurement time under parity switching](abbildungen/paritaetswechsel_messzeit.png)
+
+Parity switches are modelled as a symmetric telegraph process with rate Γ_qp acting on the joint state of both parity sectors; the decoded quantity is the initial parity. Lifetimes span the range reported for Majorana and Kitaev-chain devices (14.5 µs to > 1 ms; see the literature register, section G). Validation: bit-identical reduction to the switch-free code at Γ_qp = 0, the trajectory mean against the coupled master equation, telegraph statistics, filter calibration, and an independent classical Monte-Carlo benchmark in the dispersive limit (VAL10, VAL11).
+
+| Parity lifetime | Minimum error | Best T (rate-blind decoders) | Bayes − best linear |
+|---|---|---|---|
+| ∞ | 0.8 % | ≥ 8 µs | +0.03 pp |
+| 1 ms | 1.3 % | ≥ 8 µs | +0.03 pp |
+| 100 µs | 4.4 % | 6–8 µs | −0.15 pp |
+| 15 µs | 14 % | 4 µs | +0.10 pp |
+| 5 µs | 23.5 % | 2 µs | +0.02 pp |
+
+At 15 µs and 5 µs the rate-blind decoders (boxcar, nominal matched filter) have a significant optimum: at T = 8 µs their error is 19 % and 34 %, against 16 % and 24 % for the Bayesian filter. Neighbouring drive frequencies (11.97, 12.01) remain worse than 11.99 under switching (EXP-P2). All three stage-6 questions end as pre-registered null results or descriptive answers; see `02_FORSCHUNGSDOKUMENTATION/_04_BERICHTE/ETAPPE_6_BERICHT.md`.
+
 ## Scope and limits
 
 - **Model:** effective Majorana box–double dot–resonator model in the rotating-wave approximation with Lindblad dissipation. Parameters follow the strong-coupling set of Benjadi & Egger (t₀ = 5, t₁ = 1, λ = 0.1, κ = 0.04, Γ_φ = 0.1, γ = 0.003, 30 mK, in units of λ₀ = h · 0.2 GHz; 1/λ₀ ≈ 0.8 ns).
 - **Measurement:** homodyne detection with efficiency η = 0.5, mean resonator occupation n̄* = 0.3.
-- **One working-point parameter** (drive frequency) and one parameter regime. Weak coupling, pulse shaping, combined drifts and quasiparticle poisoning are not studied.
+- **One working-point parameter** (drive frequency) and one parameter regime. Weak coupling, pulse shaping and combined drifts are not studied. Quasiparticle poisoning is studied only with a symmetric, drive-independent rate and for the initial parity.
 - The exact reference curves of the paper are **not** reproduced (missing drive intensity and cutoff; finding F-1.3). The semiclassical reference curves (Fig. 3a/e) are reproduced to better than 1e-4. All finite-time results build on the independently validated core, not on the paper's exact curves.
 
 ## How the results were obtained
@@ -51,7 +69,7 @@ The working point is calibrated on the nominal model and evaluated with flux pha
 - **Pre-registration:** each experiment (`02_FORSCHUNGSDOKUMENTATION/_03_EXPERIMENTE/EXP-*.md`) states its question, grid, statistics and decision rule before any computation.
 - **Findings register** (`02_FORSCHUNGSDOKUMENTATION/07_BEFUNDE.md`) with explicit status labels: VERIFIED / REPRODUCED / HYPOTHESIS / OPEN / FAILED / BLOCKED. Negative results and failed runs stay documented.
 - **A documented failure:** the first run of the main experiment (EXP-E3, run 1) was invalid. A linearised Rouchon–Ralph step was too coarse away from resonance and produced an apparent matched filter *below* the Gaussian bound, which is impossible. The integrator now uses the exact non-Hermitian propagator. Validation VAL9 guards against this case and fails with the old step (finding F-3.4).
-- **58 automated checks:** 37 unit tests and 21 scientific validations (VAL0–VAL9), covering the steady state against independent solvers, cutoff convergence, a dispersive SNR reference (Smith et al. 2020), the trajectory ensemble against the master equation, and the Bayesian filter in the linear limit.
+- **66 automated checks:** 37 unit tests and 29 scientific validations (VAL0–VAL11), covering the steady state against independent solvers, cutoff convergence, a dispersive SNR reference (Smith et al. 2020), the trajectory ensemble against the master equation, and the Bayesian filter in the linear limit.
 
 ## Reproducing
 
@@ -61,8 +79,9 @@ Requires Python 3.12. Pinned dependencies are in `01_PRL_CODE/_05_INFRASTRUKTUR/
 python -m venv _UMGEBUNG/venv
 _UMGEBUNG/venv/Scripts/python -m pip install -r 01_PRL_CODE/_05_INFRASTRUKTUR/requirements-lock.txt
 cd 01_PRL_CODE
-../_UMGEBUNG/venv/Scripts/python -B -m _05_INFRASTRUKTUR.run_checks --scope all   # all 58 checks (~5 min)
+../_UMGEBUNG/venv/Scripts/python -B -m _05_INFRASTRUKTUR.run_checks --scope all   # all 66 checks (~8 min)
 ../_UMGEBUNG/venv/Scripts/python -B -m _09_ABBILDUNGEN.abbildungen_readme           # README figures from committed CSVs
+../_UMGEBUNG/venv/Scripts/python -B -m _09_ABBILDUNGEN.abbildungen_etappe6          # stage-6 figure
 ```
 
 Experiment scripts live in `01_PRL_CODE/_08_ERGEBNISSE/`, one subfolder per stage (e.g. `_03_BAYES_ROBUSTHEIT/exp_e3_bayes_arbeitspunkt.py`). The full trajectory runs take hours on a desktop CPU. Their processed outputs are committed in `11_Processed_Outputs/`, together with a provenance manifest per run.
@@ -72,12 +91,12 @@ Experiment scripts live in `01_PRL_CODE/_08_ERGEBNISSE/`, one subfolder per stag
 | Path | Content |
 |---|---|
 | `01_PRL_CODE/_01_GRUNDLAGEN_FORMELN/` | Units, RWA operators, derived quantities, semiclassical formulas |
-| `01_PRL_CODE/_02_AUSFUEHRUNG/` | Steady-state solver, homodyne SME integrator, Bayesian filter |
-| `01_PRL_CODE/_03_WISSENSCHAFTLICHE_PRUEFUNGEN/` | Scientific validations VAL0–VAL9 |
+| `01_PRL_CODE/_02_AUSFUEHRUNG/` | Steady-state solver, homodyne SME integrator, Bayesian filter, parity switching and Wonham filter |
+| `01_PRL_CODE/_03_WISSENSCHAFTLICHE_PRUEFUNGEN/` | Scientific validations VAL0–VAL11 |
 | `01_PRL_CODE/_04_AUSWERTUNG_DIAGNOSTIK/` | Decoders, error metrics, Wilson intervals |
 | `01_PRL_CODE/_05_INFRASTRUKTUR/` | Configuration, provenance, test runner, dependencies |
 | `01_PRL_CODE/_06_TESTS/` | Unit tests |
-| `01_PRL_CODE/_08_ERGEBNISSE/` | Experiment scripts per stage: `_01_REPRODUKTION`, `_02_ENDLICHE_MESSZEIT`, `_03_BAYES_ROBUSTHEIT` |
+| `01_PRL_CODE/_08_ERGEBNISSE/` | Experiment scripts per stage: `_01_REPRODUKTION`, `_02_ENDLICHE_MESSZEIT`, `_03_BAYES_ROBUSTHEIT`, `_04_PARITAETSWECHSEL` |
 | `01_PRL_CODE/_09_ABBILDUNGEN/` | Figure scripts (from committed CSVs) |
 | `01_PRL_CODE/SCHWELLEN.md` | Every numerical tolerance with its justification |
 | `02_FORSCHUNGSDOKUMENTATION/` | Research plan, conventions, findings, experiment registrations, stage reports |
@@ -85,7 +104,7 @@ Experiment scripts live in `01_PRL_CODE/_08_ERGEBNISSE/`, one subfolder per stag
 | `11_Processed_Outputs/` | Processed results per run |
 | `abbildungen/` | Figures of this README |
 
-Start reading at `02_FORSCHUNGSDOKUMENTATION/_04_BERICHTE/ETAPPE_3_BERICHT.md` (stage 3 report) and `02_FORSCHUNGSDOKUMENTATION/07_BEFUNDE.md` (findings).
+Start reading at `02_FORSCHUNGSDOKUMENTATION/_04_BERICHTE/ETAPPE_3_BERICHT.md` (stage 3 report), `ETAPPE_6_BERICHT.md` (stage 6 report) and `02_FORSCHUNGSDOKUMENTATION/07_BEFUNDE.md` (findings).
 
 ## References and data
 

@@ -27,6 +27,7 @@ Jede Etappe folgt dem Zyklus **Literatur → Fragestellung → Modell → Method
 | 3 | Robustheit & Arbeitspunktoptimierung | **G3**: Regret-Befund (positiv oder Nullresultat mit engem CI) | 3–5 Wochen |
 | 4 | Scientific ML (nur falls G3 eine begründete Aufgabe liefert) | **G4**: Mehrwert nachgewiesen oder Negativresultat | 3–6 Wochen, optional |
 | 5 | Research Release | **G5**: reproduzierbares Repo + Bericht | 2–3 Wochen |
+| 6 | Paritätswechsel während der Messung (ergänzt 2026-11-18 nach G3) | **G6**: optimale Messzeit und Decoder-Vorteil unter Γ_qp (positiv oder Nullresultat) | 3–5 Wochen |
 
 ## 3. Etappenpläne (einheitliches Schema)
 
